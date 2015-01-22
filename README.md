@@ -1,2 +1,2 @@
-# dsn1676-assignment3
-animating asteroid and spaceship
+# dsn1676-week-1
+Review all the things!

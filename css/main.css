@@ -1,0 +1,139 @@
+@-moz-viewport { width: device-width; scale: 1; }
+@-ms-viewport { width: device-width; scale: 1; }
+@-o-viewport { width: device-width; scale: 1; }
+@-webkit-viewport { width: device-width; scale: 1; }
+@viewport { width: device-width; scale: 1; } 
+
+html {
+    box-sizing: border-box;
+    
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    background-color: black;
+} 
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+.stars {
+    background-image:url(../images/stars.svg);
+    width: 100%;
+    height: 100vh;
+    -webkit-animation: stars 20s infinite;
+    animation: stars 20s infinite;
+}
+
+.asteroid {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    -webkit-animation: asteroid-rotate 8s ease-in-out infinite alternate;
+    animation: asteroid-rotate 8s ease-in-out infinite alternate;
+
+}
+
+@-webkit-keyframes asteroid-rotate {
+  
+     0% {
+        -webkit-transform: rotate(0deg);
+    }
+    
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+     
+}
+
+@keyframes asteroid-rotate {
+  
+     0% {
+        transform: rotate(0deg);
+    }
+    
+    100% {
+        transform: rotate(360deg);
+    }
+     
+}
+    
+.ship {
+    position: absolute;
+    top: 500px;
+    left: 700px;
+    -webkit-animation: ship 8s infinite;
+    animation: ship 8s infinite;
+
+}
+
+@-webkit-keyframes ship {
+    
+    0% {
+        -webkit-transform: translateX(300px) rotate(0deg);
+    }
+    
+    50% {
+        -webkit-transform: translateY(-350px) rotate(0deg); 
+    }
+    
+    70% {
+        -webkit-transform: translateY(100px) rotate(581deg)
+    }
+    
+    100% {
+        -webkit-transform-origin: left;
+        -webkit-transform: translateX(250px) rotate(1170deg);
+    }
+    
+}
+
+@keyframes ship {
+    
+    0% {
+        transform: translateX(300px) rotate(0deg);
+    }
+    
+    50% {
+        transform: translateY(-350px) rotate(0deg); 
+    }
+    
+    100% {
+        transform-origin: left;
+        transform: translateX(250px) rotate(1170deg);
+    }
+    
+}
+
+@-webkit-keyframes stars {
+
+    0% {
+    -webkit-transform: scale(1,1)
+    }
+    
+    50% {
+    -webkit-transform: scale(1.5,1.5)
+    }
+    
+    100% {
+    -webkit-transform: scale(1,1)
+    }
+        
+}
+
+@keyframes stars {
+
+    0% {
+    transform: scale(1,1)
+    }
+    
+    50% {
+        transform: scale(1.5,1.5)
+    }
+    
+    100% {
+        transform: scale(1,1)
+    }
+        
+}
